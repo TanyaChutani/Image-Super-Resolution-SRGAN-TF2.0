@@ -8,3 +8,5 @@ A TF2.0 implementation of Photo-Realistic Single Image Super-Resolution Using a 
 
 ### Model
 ![](https://github.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/blob/master/images/network.jpg)
+
+### Results
