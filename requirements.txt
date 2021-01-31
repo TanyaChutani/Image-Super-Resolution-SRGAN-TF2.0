@@ -1,0 +1,5 @@
+tensorflow2.3
+argparse
+numpy
+opencv-python
+matplotlib
