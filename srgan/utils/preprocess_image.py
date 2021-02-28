@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-def train_preprocess_image(path,train_image_width,train_image_height,downsample_factor):
+def train_preprocess_image(path,train_image_width=96,train_image_height=96,downsample_factor=4):
   image = tf.io.read_file(path)
   image = tf.image.decode_png(image, channels=3)
   hr_image = tf.image.random_crop(image,size=(train_image_width,train_image_height,3))
@@ -8,10 +8,9 @@ def train_preprocess_image(path,train_image_width,train_image_height,downsample_
                              method=tf.image.ResizeMethod.BILINEAR)
   hr_image = tf.cast(hr_image,tf.float32)/127.5 - 1
   lr_image = tf.cast(lr_image,tf.float32)
-
   return hr_image, lr_image
 
-def test_preprocess_image(path,test_image_height,test_image_width,downsample_factor):
+def test_preprocess_image(path,test_image_height=1300,test_image_width=2000,downsample_factor=4):
   image = tf.io.read_file(path)
   image = tf.image.decode_png(image, channels=3)
   hr_image = tf.image.resize(image,(test_image_height,test_image_width))
@@ -19,5 +18,4 @@ def test_preprocess_image(path,test_image_height,test_image_width,downsample_fac
                              method=tf.image.ResizeMethod.BILINEAR)
   hr_image = tf.cast(hr_image,tf.float32)/127.5 - 1
   lr_image = tf.cast(lr_image,tf.float32)
-
   return hr_image, lr_image
