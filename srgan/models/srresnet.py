@@ -1,9 +1,10 @@
 import tensorflow as tf
+from srgan.models.generator import Generator
 
 class Generator_MSE_Model(tf.keras.models.Model):
     def __init__(self, **kwargs):
         super(Generator_MSE_Model, self).__init__()
-        self.generator_model = generator_model
+        self.generator_model = Generator()
 
     def compile(self, generator_optimizer, generator_loss):
         super(Generator_MSE_Model, self).compile()
@@ -23,22 +24,3 @@ class Generator_MSE_Model(tf.keras.models.Model):
     def call(self, lr_image):
         sr_image = self.generator_model(lr_image, training=False)
         return sr_image
-
-
-generator_learning_rate = 0.0001
-generator_mse_model = Generator_MSE_Model(generator_model=generator_model)
-generator_mse_model.generator_model.build((1, None, None, 3))
-generator_mse_model.load_weights('/content/drive/MyDrive/srresnet_weights/')
-callbacks = [tf.keras.callbacks.ModelCheckpoint('/content/drive/MyDrive/srresnet_weights/',
-                                                monitor='mse_loss',
-                                                save_best_only=False,
-                                                save_weights_only=True,
-                                                mode='auto')]
-
-generator_mse_model = Generator_MSE_Model(generator_model=generator_model)
-generator_mse_model.generator_model.build((1, None, None, 3))
-generator_mse_model.compile(generator_optimizer=tf.keras.optimizers.Adam(generator_learning_rate),
-                            generator_loss=tf.keras.losses.MeanSquaredError())
-generator_mse_model.fit(train_dataset,
-                        epochs = srresnet_epochs,
-                        callbacks=callbacks)
