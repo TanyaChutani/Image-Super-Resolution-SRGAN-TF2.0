@@ -1,10 +1,13 @@
 import tensorflow as tf
+from srgan.models.generator import Generator
+from srgan.models.discriminator import Discriminator
+from srgan.loss.content_loss import Content_Loss
 
 class SRGAN(tf.keras.models.Model):
     def __init__(self, **kwargs):
         super(SRGAN, self).__init__()
-        self.generator_model = generator_model
-        self.discriminator_model = discriminator_model
+        self.generator_model = Generator()
+        self.discriminator_model = Discriminator()
         self.content_loss = Content_Loss()
         self.mse = tf.keras.losses.MeanSquaredError(reduction='none')
 
