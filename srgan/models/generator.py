@@ -1,4 +1,5 @@
 import tensorflow as tf
+from srgan.utils.generator_utils import Residual_Block, Upsample_Block
 
 class Generator(tf.keras.models.Model):
     def __init__(self, **kwargs):
