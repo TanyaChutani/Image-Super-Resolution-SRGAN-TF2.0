@@ -10,7 +10,7 @@ A TF2.0 implementation of Photo-Realistic Single Image Super-Resolution Using a 
 ![](https://github.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/blob/master/images/network.jpg)
 
 ### Results
-
+![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/assets/download.png)
 
     @InProceedings{srgan,
         author = {Christian Ledig, Lucas Theis, Ferenc Huszar, Jose Caballero, Andrew Cunningham, Alejandro Acosta, Andrew Aitken, Alykhan Tejani, Johannes Totz, Zehan Wang, Wenzhe Shi},
