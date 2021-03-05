@@ -11,8 +11,8 @@ A TF2.0 implementation of Photo-Realistic Single Image Super-Resolution Using a 
 
 ### Results
 ![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-1.png)
-![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-3.ng)
-![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-7.ng)
+![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-3.png)
+![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-7.png)
 ![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-8.png)
 ![](https://raw.githubusercontent.com/TanyaChutani/Image-Super-Resolution-SRGAN-TF2.0/master/results/result-9.png)
 
